@@ -1,5 +1,6 @@
 package com.example.aluno.otimizadordetempo;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -8,6 +9,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 public class Inicial extends AppCompatActivity {
 
@@ -23,10 +25,8 @@ public class Inicial extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction(Atividade).show();
-                Toast.makeText(MainActivity.this, "Laboratório 1!", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(MainActivity.this, Main2Activity.class));
+                Toast.makeText(Inicial.this, "Laboratório 1!", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(Inicial.this, Atividade.class));
             }
         });
     }
